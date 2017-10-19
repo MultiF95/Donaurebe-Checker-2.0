@@ -23,7 +23,7 @@ if [ ! "$var1" == "$var2" ]; then
 	
 	echo "update @ $time"
 	notify-send "NEW PRODUCTS @ DONAUREBE"
-	diff -u ~/donau/donau_pl.txt ~/donau/donau_pl_tmp.txt | grep '^+' | awk -F'+' '{ print $1, $2, $3, $6 }' > ~/donau/change.txt
+	diff -u ~/donau/donau_pl.txt ~/donau/donau_pl_tmp.txt | grep '^+' | awk -F'+' '{ print $2, $3, $6, $7, $8 }' > ~/donau/change.txt
 	
 	list=`cat ~/donau/change.txt`
 	subject="Neue Produkte auf Donaurebe"
