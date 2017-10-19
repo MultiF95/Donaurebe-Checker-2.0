@@ -14,6 +14,7 @@ if [ ! -d ~/donau ]; then
 	sleep 1
 	echo "CREATING MISSING FILES / DIRS"
 	sudo apt-get install curl
+	sudo apt-get install jq
 	mkdir ~/donau
 	chmod 777 ~/donau_main.sh
 	sleep 1
