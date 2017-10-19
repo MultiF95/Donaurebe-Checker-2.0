@@ -1,4 +1,4 @@
-# Donaurebe Checker 2 for Linux
+# Donaurebe Checker 2 for Linux (may work in OSX too)
 
 ## Description
 
