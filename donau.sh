@@ -2,7 +2,7 @@
 
 resize -s 25 25
 
-ver=2.0.2
+ver=2.1.0
 
 #CHECKS DATA
 clear
