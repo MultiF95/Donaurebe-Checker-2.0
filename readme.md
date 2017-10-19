@@ -2,7 +2,7 @@
 
 ## Description
 
-The 2.0 Version is able to send you Push Notifications with Pushbullet™.
+The 2.0 Version is able to send you Push-Notifications with Pushbullet℠.
 
 This script checks if new products are available on www.donaurebe.com.
 
