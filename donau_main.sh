@@ -32,10 +32,7 @@ if [ ! "$var1" == "$var2" ]; then
 		
 		##PUSHBULLET
 		{
-		curl -s -u """o.l01W0uErXooJuf0DZhHXsHXlXnij9oEr"":" -d type="note" -d body="$list" -d title="$subject" 'https://api.pushbullet.com/v2/pushes'
-		#curl -s -u """o.oULkayHrtUOyvLNgRWlLlApWDJ7dqWoR"":" -d type="note" -d body="$list" -d title="$subject" 'https://api.pushbullet.com/v2/pushes'
-		#curl -s -u """o.zHAKXyNMBlZCZrFwlfr6LCWfxhA2WNkd"":" -d type="note" -d body="$list" -d title="$subject" 'https://api.pushbullet.com/v2/pushes'
-		#curl -s -u """o.dFbrxftwLFO7N9UUEIPrj5Fbq0IZiiZp"":" -d type="note" -d body="$list" -d title="$subject" 'https://api.pushbullet.com/v2/pushes'
+		curl -s -u """o.l01W0uErXooJuf0DZhHXsHXlXnij9oEr"":" -d type="note" -d channel_tag="donaurebe" -d body="$list" -d title="$subject" 'https://api.pushbullet.com/v2/pushes'
 		} &> /dev/null
 		##PUSHBULLET
 		
