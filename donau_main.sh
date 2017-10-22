@@ -4,16 +4,16 @@ time=`date +"%H:%M"`
 create () {
 curl -s http://47.91.95.44/index/show.html?page=1 > ~/donau/donau_sc.json
 jq '.data[] | .listingname' ~/donau/donau_sc.json | awk -F '"' '{print $2}' > ~/donau/donau_lo.txt
-awk -F '\ ' '{print $1, $2, $3, $4}' ~/donau/donau_lo.txt > ~/donau/donau_pl.txt
+awk '{print $1, $2, $3, $4}' ~/donau/donau_lo.txt > ~/donau/donau_pl.txt
 }
 
 createnow () {
 curl -s http://47.91.95.44/index/show.html?page=1 > ~/donau/donau_sc.json
 jq '.data[] | .listingname' ~/donau/donau_sc.json | awk -F '"' '{print $2}' > ~/donau/donau_lo.txt
-awk -F '\ ' '{print $1, $2, $3, $4}' ~/donau/donau_lo.txt > ~/donau/donau_pl_tmp.txt
+awk '{print $1, $2, $3, $4}' ~/donau/donau_lo.txt > ~/donau/donau_pl_tmp.txt
 }
 
-main () {
+#main () {
 
 createnow
 
@@ -44,7 +44,7 @@ if [ ! "$var1" == "$var2" ]; then
 else
 	echo "check   @ $time"
 fi
-}
+#}
 
-main
+#main
 #(echo >/dev/tcp/dcdle.net/22) &>/dev/null && echo "main server online. doing nothing" && exit || echo "other checker down. executing..." && main
