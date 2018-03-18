@@ -21,7 +21,7 @@ createnow
 var1=`cat ~/donau/donau_pl.txt`
 var2=`cat ~/donau/donau_pl_tmp.txt`
 
-if [ ! "$var1" == "$var2" ]; then
+if [ "$var1" != "$var2" ]; then
 	echo "check   @ $time"
 
 	diff -u ~/donau/donau_pl.txt ~/donau/donau_pl_tmp.txt | grep '^+' | awk -F'+' '{ print $2 }' | tail -n +2  > ~/donau/change.txt
@@ -44,9 +44,9 @@ if [ ! "$var1" == "$var2" ]; then
 		
 			## Favorite
 			fav=`cat ~/donau/favorites.txt`
-			favlist=`grep "$fav" change.txt`
+			favlist=`grep "$fav" ~/donau/change.txt`
 			if [ ! -z "$favlist" ]; then
-				if [ ! "$favlist" == "$list" ]; then
+				if [ "$favlist" != "$list" ]; then
 					curl -s -u """o.l01W0uErXooJuf0DZhHXsHXlXnij9oEr"":" -d type="note" -d channel_tag="donaurebe" -d body="$favlist" -d title="FAVORITE" 'https://api.pushbullet.com/v2/pushes'			
 				fi
 			fi
