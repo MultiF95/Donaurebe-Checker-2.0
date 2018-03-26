@@ -1,17 +1,17 @@
 #!/bin/bash
-# DONAUREBE CHECKER 3.0 -- FAVORITES AND NAME FILTER
+#Rebechecker 3.0
 time=`date +"%H:%M"`
 
 #filter=`sed 's/,/ /g' | sed 's/,//g' | sed 's/RUNACC//g' | sed 's/runacc//g' | sed 's/petacc//g' | sed 's/longruner//g' | sed 's/Petacc//g'| sed 's/Sicai//g' | sed 's/Sable//g'`
 
 create () {
-curl -s http://47.91.95.44/index/show.html?page=1 > ~/donau/donau_sc.json
+curl -s http://47.91.95.44/index/fc.html > ~/donau/donau_sc.json
 jq '.data[] | .listingname' ~/donau/donau_sc.json | awk -F '"' '{print $2}' | sed 's/,/ /g' | sed 's/,//g' > ~/donau/donau_lo.txt
 awk '{print $1, $2, $3, $4, $5}' ~/donau/donau_lo.txt > ~/donau/donau_pl.txt
 }
 
 createnow () {
-curl -s http://47.91.95.44/index/show.html?page=1 > ~/donau/donau_sc.json
+curl -s http://47.91.95.44/index/fc.html > ~/donau/donau_sc.json
 jq '.data[] | .listingname' ~/donau/donau_sc.json | awk -F '"' '{print $2}' | sed 's/,/ /g' | sed 's/,//g' > ~/donau/donau_lo.txt
 awk '{print $1, $2, $3, $4, $5}' ~/donau/donau_lo.txt > ~/donau/donau_pl_tmp.txt
 }
