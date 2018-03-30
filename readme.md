@@ -2,22 +2,28 @@
 
 ## Description
 
-The 3.0 Version is able to send you Push-Notifications with Pushbullet℠.
+The 4.0 Version is able to send you Push-Notifications with Pushbullet℠.
 
 This script checks if new products are available on www.xxxrebe.com.
 
-If so, it will notify you.
+If so, it will notify you. 
 
-Tested with Ubuntu 17.10.
+## Features
+
+Create a Favorites List in ~/donau/favorites.txt to get notified specically 
+
+Expensive Products will be pushed seperately, so you will never miss a special gift
 
 ## Installation
 
-- move "rebecheck.sh"; "rebepricecheck.sh" in your home directory.
+- move "rebecheck.sh" in your home directory.
 
 - create the folder ~/donau/
 
-- make both executeable and run them once.
+- make executeable and run.
 
 - create the missing files and install the missing programs ( jq f.e. )
 
-- create a crontab that executes both scripts every x minutes
+- create a crontab that executes script every x minutes
+
+Tested with Ubuntu 17.10.
