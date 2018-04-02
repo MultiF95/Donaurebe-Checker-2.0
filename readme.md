@@ -1,4 +1,4 @@
-# Rebechecker for Linux or OSX
+# Rebechecker
 
 ## Description
 
