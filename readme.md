@@ -1,29 +1,34 @@
-# Rebechecker (24/7 use)
+# Rebechecker for Linux or OSX
 
 ## Description
 
-The 4.0 Version is able to send you Push-Notifications with Pushbullet℠.
-
-This script checks if new products are available on www.xxxrebe.com.
-
-If so, it will notify you. 
+The Rebechecker checks products on xxxrebe.com and sends newly listed items to a Pushbullet Channel.
 
 ## Features
 
-Create a Favorites List in ~/donau/favorites.txt to get notified specically 
+Create a Favorites-List to get a dedicated "FAVORITE" Push to the Pushbullet Channel.
 
-Expensive Products will be pushed seperately, so you will never miss a special gift
+Set a minumum price of a product to get notified about expensive products seperately.
 
 ## Installation
 
-- move "rebecheck.sh" in your home directory.
+- move "rebecheck.sh" to your wished directory.
 
-- create the folder ~/donau/
+- create a temp file folder and set the path in the script.
 
-- make executeable and run.
+- make executeable. (chmod +x rebecheck.sh)
 
-- create the missing files and install the missing programs ( jq f.e. )
+- run the script once
+
+- create missing files and install the missing programs ( jq f.e. )
 
 - create a crontab that executes script every x minutes
 
-Tested with Ubuntu 17.10.
+Tested with Ubuntu 17.10, RASPBIAN, and OSX High Sierra
+
+## Parameters
+
+"domain": the current domain of xxrebe
+"tag": the pushbulletchannel tag to push to
+"path": temp files will be stored there
+"endpage": tell the script how many json pages to check 
