@@ -8,7 +8,7 @@ The Rebechecker checks products on xxxrebe.com and sends newly listed items to a
 
 Create a Favorites-List to get a dedicated "FAVORITE" Push to the Pushbullet Channel.
 
-Set a minumum price of a product to get notified about expensive products seperately.
+Set a minumum price to get notified about expensive products seperately.
 
 ## Installation
 
