@@ -29,6 +29,9 @@ Tested with Ubuntu 17.10, RASPBIAN, and OSX High Sierra
 ## Parameters
 
 "domain": the current domain of xxrebe
+
 "tag": the pushbulletchannel tag to push to
+
 "path": temp files will be stored there
+
 "endpage": tell the script how many json pages to check 
