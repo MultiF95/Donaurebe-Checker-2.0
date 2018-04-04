@@ -1,13 +1,13 @@
 #!/bin/bash
-#Rebechecker v4.1, Date: 03.04.2018
+#Rebechecker v4.1, Date: 04.04.2018
 time=`date +"%H:%M"`
 
 #parameters:
 domain="47.91.95.44"
-tag="" 				#pushbullet channel name
-min="50"						#minimum price to trigger expensive push
-path="/Users/xxx/xxx" 	#folder for temp files. Favour RAM Storage for 24/7 use
-endpage="3"			 			#json sites will be checked. Example: 03.04.2018 2 - 3 pages
+tag="" #pushbullet channel name
+min="50" #minimum price to trigger expensive push
+path="/Users/xxx/xxx" #folder for temp files. Favour RAM Storage for 24/7 use
+endpage="3" #json sites will be checked. Example: 03.04.2018 2 - 3 pages
 
 create () {
 rm $path/plu$state.txt
