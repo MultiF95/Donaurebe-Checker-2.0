@@ -4,13 +4,10 @@ time=`date +"%H:%M"`
 
 #parameters:
 domain="47.91.95.44"
-tag="katholing" 				#pushbullet channel name
+tag="" 				#pushbullet channel name
 min="50"						#minimum price to trigger expensive push
-path="/Users/katholing/rebe" 	#folder for temp files. Favour RAM Storage for 24/7 use
+path="/Users/xxx/xxx" 	#folder for temp files. Favour RAM Storage for 24/7 use
 endpage="3"			 			#json sites will be checked. Example: 03.04.2018 2 - 3 pages
-
-#key https://api.pushbullet.com/v2/pushes
-#api o.l01W0uErXooJuf0DZhHXsHXlXnij9oEr
 
 create () {
 rm $path/plu$state.txt
@@ -57,14 +54,14 @@ if [ "$pl" != "$plt" ]; then
 				na=`jq '.data[] | "\(.listingname) \(.price)"' $path/sourcep.json | awk -F '"' '{print $2}' | head -n 1| awk '{print $1, $2, $3, $4, $5}'`
 				pricetitle=`echo "EXPENSIVE "$na $ptmp "€"`
 				{
-				curl -s -u """o.l01W0uErXooJuf0DZhHXsHXlXnij9oEr"":" -d type="note" -d channel_tag="$tag" -d body="$link" -d title="$pricetitle" 'https://api.pushbullet.com/v2/pushes' 
+				curl -s -u """>apikeyhere<"":" -d type="note" -d channel_tag="$tag" -d body="$link" -d title="$pricetitle" 'https://api.pushbullet.com/v2/pushes' 
 				} &> /dev/null
 				echo $ptmp > $path/price.txt
 			fi
 
 		##PUSH
 		{
-		curl -s -u """o.l01W0uErXooJuf0DZhHXsHXlXnij9oEr"":" -d type="note" -d channel_tag="$tag" -d body="$list" -d title="NEW" 'https://api.pushbullet.com/v2/pushes'
+		curl -s -u """>apikeyhere<"":" -d type="note" -d channel_tag="$tag" -d body="$list" -d title="NEW" 'https://api.pushbullet.com/v2/pushes'
 		} &> /dev/null
 
 		##ECHO
@@ -76,7 +73,7 @@ if [ "$pl" != "$plt" ]; then
 		favlist=`grep "$fav" $path/change.txt`
 		if [ ! -z "$favlist" ]; then
 			if [ "$favlist" != "$list" ]; then
-			curl -s -u """o.l01W0uErXooJuf0DZhHXsHXlXnij9oEr"":" -d type="note" -d channel_tag="$tag" -d body="$favlist" -d title="FAVORITE" 'https://api.pushbullet.com/v2/pushes'			
+			curl -s -u """>apikeyhere<"":" -d type="note" -d channel_tag="$tag" -d body="$favlist" -d title="FAVORITE" 'https://api.pushbullet.com/v2/pushes'			
 			fi
 		fi
 
